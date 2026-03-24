@@ -4,5 +4,6 @@
 
 export { DrawerRoot } from './DrawerRoot'
 export { DrawerOverlay } from './DrawerOverlay'
+export { DrawerContent } from './DrawerContent'
 
 export type * from './types'
