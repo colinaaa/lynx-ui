@@ -4,6 +4,8 @@
 
 import type { ReactNode } from '@lynx-js/react'
 
+import type { CSSProperties } from '@lynx-js/types'
+
 export interface DrawerRootProps {
   /**
    * The controlled open state of the drawer.
@@ -50,7 +52,7 @@ export interface DrawerOverlayProps {
   /**
    * Additional styles.
    */
-  style?: string
+  style?: CSSProperties
   /**
    * Callback when the overlay is clicked.
    */
@@ -69,7 +71,7 @@ export interface DrawerContentProps {
   /**
    * Additional styles.
    */
-  style?: string
+  style?: CSSProperties
   /**
    * Disable the swipe-to-close gesture.
    */
