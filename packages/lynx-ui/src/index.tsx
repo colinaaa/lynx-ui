@@ -241,6 +241,18 @@ export type {
   SwitchRenderProps,
 } from '@lynx-js/lynx-ui-switch'
 
+// drawer
+export {
+  DrawerRoot,
+  DrawerOverlay,
+  DrawerContent,
+} from '@lynx-js/lynx-ui-drawer'
+export type {
+  DrawerRootProps,
+  DrawerOverlayProps,
+  DrawerContentProps,
+} from '@lynx-js/lynx-ui-drawer'
+
 export {
   SheetRoot,
   SheetContent,

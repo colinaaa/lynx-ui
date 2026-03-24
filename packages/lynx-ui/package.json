@@ -35,6 +35,7 @@
     "@lynx-js/lynx-ui-common": "workspace:*",
     "@lynx-js/lynx-ui-dialog": "workspace:*",
     "@lynx-js/lynx-ui-draggable": "workspace:*",
+    "@lynx-js/lynx-ui-drawer": "workspace:*",
     "@lynx-js/lynx-ui-feed-list": "workspace:*",
     "@lynx-js/lynx-ui-form": "workspace:*",
     "@lynx-js/lynx-ui-input": "workspace:*",
