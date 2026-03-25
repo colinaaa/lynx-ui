@@ -51,14 +51,15 @@ export function App() {
 
 Manages the Drawer's open state, handles mount/unmount animations via Presence, and provides context to its children.
 
-| Prop           | Type                                     | Default  | Description                                        |
-| :------------- | :--------------------------------------- | :------- | :------------------------------------------------- |
-| `show`         | `boolean`                                | `false`  | The controlled open state of the drawer.           |
-| `defaultShow`  | `boolean`                                | `false`  | The default open state (uncontrolled).             |
-| `onShowChange` | `(show: boolean) => void`                | -        | Callback fired when the drawer open state changes. |
-| `placement`    | `'left' \| 'right' \| 'top' \| 'bottom'` | `'left'` | The edge of the screen the drawer slides in from.  |
-| `onOpen`       | `() => void`                             | -        | Callback fired when the enter animation finishes.  |
-| `onClose`      | `() => void`                             | -        | Callback fired when the exit animation finishes.   |
+| Prop           | Type                                     | Default  | Description                                                                                                                         |
+| :------------- | :--------------------------------------- | :------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| `show`         | `boolean`                                | `false`  | The controlled open state of the drawer.                                                                                            |
+| `defaultShow`  | `boolean`                                | `false`  | The default open state (uncontrolled).                                                                                              |
+| `onShowChange` | `(show: boolean) => void`                | -        | Callback fired when the drawer open state changes.                                                                                  |
+| `placement`    | `'left' \| 'right' \| 'top' \| 'bottom'` | `'left'` | The edge of the screen the drawer slides in from.                                                                                   |
+| `forceMount`   | `boolean`                                | `false`  | Mount the drawer and render its content even when not shown. The drawer remains in closed state but is kept alive in the view tree. |
+| `onOpen`       | `() => void`                             | -        | Callback fired when the enter animation finishes.                                                                                   |
+| `onClose`      | `() => void`                             | -        | Callback fired when the exit animation finishes.                                                                                    |
 
 ### `DrawerOverlay`
 

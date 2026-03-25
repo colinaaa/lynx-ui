@@ -16,6 +16,7 @@ export function DrawerRoot(props: DrawerRootProps) {
     show,
     defaultShow = false,
     placement = 'left',
+    forceMount = false,
     onShowChange,
     onOpen,
     onClose,
@@ -51,7 +52,7 @@ export function DrawerRoot(props: DrawerRootProps) {
     setMounted(false)
   })
 
-  if (!mounted) {
+  if (!mounted && !forceMount) {
     return null
   }
 
@@ -73,6 +74,7 @@ export function DrawerRoot(props: DrawerRootProps) {
           top: 0,
           right: 0,
           bottom: 0,
+          display: (!mounted && forceMount) ? 'none' : 'flex',
         }}
         overlayViewProps={{
           'native-interaction-enabled': true,

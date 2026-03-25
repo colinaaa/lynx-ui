@@ -42,6 +42,13 @@ export interface DrawerRootProps {
    * The content of the drawer.
    */
   children?: ReactNode
+
+  /**
+   * Mount the drawer and render its content even when not shown.
+   * The drawer remains in closed state but is kept alive in the view tree.
+   * @defaultValue false
+   */
+  forceMount?: boolean
 }
 
 export interface DrawerOverlayProps {
