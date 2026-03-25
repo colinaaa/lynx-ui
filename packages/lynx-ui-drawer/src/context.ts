@@ -3,6 +3,9 @@
 // LICENSE file in the root directory of this source tree.
 
 import { createContext, useContext } from '@lynx-js/react'
+import type { MainThreadRef } from '@lynx-js/react'
+
+import type { MotionValue } from '@lynx-js/motion/mini'
 
 export interface DrawerContextValue {
   show: boolean
@@ -10,6 +13,7 @@ export interface DrawerContextValue {
   onShowChange: (show: boolean) => void
   onOpen?: () => void
   onClose?: () => void
+  drawerProgress: MainThreadRef<MotionValue<number>>
 }
 
 export const DrawerContext = createContext<DrawerContextValue | null>(null)

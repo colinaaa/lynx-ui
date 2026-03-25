@@ -16,6 +16,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@lynx-js/lynx-ui": "workspace:*",
     "@lynx-js/react": "catalog:",
     "clsx": "catalog:"
   },

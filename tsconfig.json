@@ -21,6 +21,9 @@
       "path": "./packages/lynx-ui-draggable"
     },
     {
+      "path": "./packages/lynx-ui-drawer"
+    },
+    {
       "path": "./packages/lynx-ui-feed-list"
     },
     {
@@ -50,7 +53,7 @@
     {
       "path": "./packages/lynx-ui-scroll-view"
     },
-        {
+    {
       "path": "./packages/lynx-ui-sheet"
     },
     {

@@ -731,6 +731,31 @@ importers:
         specifier: catalog:tailwind
         version: 3.4.17
 
+  apps/examples/drawer:
+    dependencies:
+      '@lynx-js/lynx-ui':
+        specifier: workspace:*
+        version: link:../../../packages/lynx-ui
+      '@lynx-js/react':
+        specifier: 'catalog:'
+        version: 0.113.0(@lynx-js/types@3.6.0)(@types/react@18.3.27)
+      clsx:
+        specifier: 'catalog:'
+        version: 2.1.1
+    devDependencies:
+      '@lynx-js/react-rsbuild-plugin':
+        specifier: 'catalog:'
+        version: 0.11.2(@lynx-js/react@0.113.0(@lynx-js/types@3.6.0)(@types/react@18.3.27))(webpack@5.104.1)
+      '@lynx-js/rspeedy':
+        specifier: 'catalog:'
+        version: 0.11.2(@rspack/core@1.6.8(@swc/helpers@0.5.18))(typescript@5.9.3)(webpack@5.104.1)
+      '@lynx-js/types':
+        specifier: 'catalog:'
+        version: 3.6.0
+      '@types/react':
+        specifier: 'catalog:'
+        version: 18.3.27
+
   luna/packages/luna-core: {}
 
   luna/packages/luna-reactlynx:
@@ -1047,6 +1072,9 @@ importers:
       '@lynx-js/lynx-ui-draggable':
         specifier: workspace:*
         version: link:../lynx-ui-draggable
+      '@lynx-js/lynx-ui-drawer':
+        specifier: workspace:*
+        version: link:../lynx-ui-drawer
       '@lynx-js/lynx-ui-feed-list':
         specifier: workspace:*
         version: link:../lynx-ui-feed-list
@@ -1226,6 +1254,40 @@ importers:
       '@lynx-js/react-use':
         specifier: 'catalog:'
         version: 0.0.7(@lynx-js/react@0.113.0(@lynx-js/types@3.6.0)(@types/react@18.3.27))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      '@lynx-js/react':
+        specifier: 'catalog:'
+        version: 0.113.0(@lynx-js/types@3.6.0)(@types/react@18.3.27)
+      '@lynx-js/types':
+        specifier: 'catalog:'
+        version: 3.6.0
+      '@rslib/core':
+        specifier: 'catalog:'
+        version: 0.16.1(typescript@5.9.3)
+      '@types/react':
+        specifier: 'catalog:'
+        version: 18.3.27
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  packages/lynx-ui-drawer:
+    dependencies:
+      '@lynx-js/lynx-ui-common':
+        specifier: workspace:*
+        version: link:../lynx-ui-common
+      '@lynx-js/lynx-ui-overlay':
+        specifier: workspace:*
+        version: link:../lynx-ui-overlay
+      '@lynx-js/lynx-ui-presence':
+        specifier: workspace:*
+        version: link:../lynx-ui-presence
+      '@lynx-js/motion':
+        specifier: 'catalog:'
+        version: 0.0.2(@lynx-js/react@0.113.0(@lynx-js/types@3.6.0)(@types/react@18.3.27))(@lynx-js/types@3.6.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      clsx:
+        specifier: 'catalog:'
+        version: 2.1.1
     devDependencies:
       '@lynx-js/react':
         specifier: 'catalog:'

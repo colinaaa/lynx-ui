@@ -2,11 +2,10 @@
 // Licensed under the Apache License Version 2.0 that can be found in the
 // LICENSE file in the root directory of this source tree.
 
-import { useState } from '@lynx-js/react'
+import { useEffect, useState } from '@lynx-js/react'
 
 import { useMemoizedFn } from '@lynx-js/lynx-ui-common'
 import { OverlayView } from '@lynx-js/lynx-ui-overlay'
-import { usePresenceGroup } from '@lynx-js/lynx-ui-presence'
 import { useMotionValueRef } from '@lynx-js/motion/mini'
 
 import { DrawerContext } from './context'
@@ -37,15 +36,22 @@ export function DrawerRoot(props: DrawerRootProps) {
 
   const drawerProgress = useMotionValueRef(0)
 
-  const { mountView, renderChildren } = usePresenceGroup({
-    show: actualShow,
-    forceMount: false,
-    children,
-    onOpen,
-    onClose,
+  // Mount logic: we keep it mounted until close animation finishes
+  const [mounted, setMounted] = useState(actualShow)
+
+  useEffect(() => {
+    if (actualShow) {
+      setMounted(true)
+    }
+  }, [actualShow])
+
+  // Content will call onClose when its close animation finishes, and we can unmount then.
+  const handleClose = useMemoizedFn(() => {
+    onClose?.()
+    setMounted(false)
   })
 
-  if (!mountView) {
+  if (!mounted) {
     return null
   }
 
@@ -56,7 +62,7 @@ export function DrawerRoot(props: DrawerRootProps) {
         placement,
         onShowChange: handleShowChange,
         onOpen,
-        onClose,
+        onClose: handleClose,
         drawerProgress,
       }}
     >
@@ -73,7 +79,7 @@ export function DrawerRoot(props: DrawerRootProps) {
           'flatten': false,
         }}
       >
-        {renderChildren}
+        {children}
       </OverlayView>
     </DrawerContext.Provider>
   )
